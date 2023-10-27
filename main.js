@@ -67,8 +67,8 @@ scene.add(pointlight2);
 // create a new RGBELoader to import the HDR
 const hdrEquirect = new RGBELoader()
 	// add your HDR //
-	.setPath("https://raw.githubusercontent.com/miroleon/gradient_hdr_freebie/main/Gradient_HDR_Freebies/")
-	.load("ml_gradient_freebie_02.hdr", function () {
+	.setPath("/")
+	.load("ml_gradient_freebie_01.hdr", function () {
 		hdrEquirect.mapping = EquirectangularReflectionMapping;
 	});
 scene.environment = hdrEquirect;
@@ -121,7 +121,7 @@ const material2 = new MeshStandardMaterial({
 });
 
 const gltfLoader = new GLTFLoader();
-const url = "./assets/gameready_colt_python_revolver/scene.gltf";
+const url = "/gameready_colt_python_revolver/scene.gltf";
 gltfLoader.load(url, (gltf) => {
 	// gltf.scene.children[0].material = material1;
 	// gltf.scene.children[1].material = material2;
